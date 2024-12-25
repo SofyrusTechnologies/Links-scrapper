@@ -2,8 +2,8 @@ import sqlite3
 import csv
 
 # Define the CSV and SQLite file paths
-csv_file_path = 'cleaned_data.csv'  # Replace with your actual CSV file path
-sqlite_db_path = 'updated_data.db'  # Replace with your SQLite database file path
+csv_file_path = 'Data-19-11-2024.csv'  # Replace with your actual CSV file path
+sqlite_db_path = 'Data-19Nov2024.db'  # Replace with your SQLite database file path
 
 try:
     # Connect to the SQLite database (or create it if it doesn't exist)

@@ -14,7 +14,7 @@ import fs from 'fs'
 
   const urls = [];
     await new Promise((resolve, reject) => {
-      fs.createReadStream('mylinks1.csv')
+      fs.createReadStream('Links-25-12-2024.csv')
         .pipe(parse({ delimiter: ',', from_line: 2 })) // Start from the second line if there's a header
         .on('data', (row) => {
           urls.push(row[0]); // Assuming URLs are in the first column
@@ -25,6 +25,7 @@ import fs from 'fs'
 
   // Navigate to your target URL
   console.log("my urls: ", urls)
+  console.log("Total urls:",urls.length)
   let count=0
  
   for (const link of urls)
@@ -144,7 +145,7 @@ import fs from 'fs'
 
   // Write the CSV data to a file
   const csvData = csvRows.join('\n') + '\n';
-  fs.appendFileSync('updated_data1.csv', csvData);
+  fs.appendFileSync('Data-25-12-2024.csv', csvData);
 
   
   console.log('record no- ',++count);
